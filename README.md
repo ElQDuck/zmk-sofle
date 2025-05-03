@@ -5,6 +5,8 @@
 
 # Changelog
 
+- 2025/05/03
+  1. Added [nice_view_custom](https://github.com/GPeye/urchin-peripheral-animation) static image
 - 2024/12/21
   1. Added support for zmk-studio (just refresh the left hand to use).
 - 2024/10/24
