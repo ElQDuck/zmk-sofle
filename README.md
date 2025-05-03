@@ -5,7 +5,9 @@
 ## Boards
 
 ### Right
-[](https://nicekeyboards.com/docs/nice-nano/)
+- Model: [nice!nano](https://nicekeyboards.com/docs/nice-nano/)
+- Board-ID: nRF52840-nicenano
+- SoftDevice: S140 version 6.1.1
 
 # Sofle Keymap
 
