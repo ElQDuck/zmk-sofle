@@ -3,6 +3,14 @@
 
 [Sofle Split (Standard version)](https://de.aliexpress.com/item/1005008176724988.html?spm=a2g0o.order_list.order_list_main.16.186b5c5fNgYmZ1&gatewayAdapt=glo2deu)
 
+
+# Sofle Keymap
+
+Use the [keymap-editor](https://nickcoutsos.github.io/keymap-editor/) to change the key map.
+
+ℹ️ Update the image with the [GitHub action](https://github.com/ElQDuck/zmk-sofle/actions/workflows/draw.yml)
+<img src="keymap-drawer/sofle.svg" >
+
 # Changelog
 
 - 2025/05/03
@@ -12,10 +20,6 @@
 - 2024/10/24
   1. Modified power supply mode to reduce power consumption.
   2. Fixed the automatic shut-off feature for RGB power supply.
-
-# Sofle Keymap
-
-<img src="keymap-drawer/sofle.svg" >
 
 # Contact
 
