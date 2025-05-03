@@ -1,8 +1,11 @@
 {
     "cSpell.words": [
         "DCONFIG",
+        "gnuarmemb",
         "Keymap",
         "Sofle",
-        "uart"
+        "uart",
+        "xtools",
+        "zmkfirmware"
     ]
 }

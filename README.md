@@ -2,6 +2,11 @@
 
 [Sofle Split (Standard version)](https://de.aliexpress.com/item/1005008176724988.html?spm=a2g0o.order_list.order_list_main.16.186b5c5fNgYmZ1&gatewayAdapt=glo2deu)
 
+## Boards
+
+### Right
+[](https://nicekeyboards.com/docs/nice-nano/)
+
 # Sofle Keymap
 
 Use the [keymap-editor](https://nickcoutsos.github.io/keymap-editor/) to change the key map.
