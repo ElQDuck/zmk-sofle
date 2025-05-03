@@ -1,7 +1,9 @@
 name: Build ZMK firmware
 on:
-  workflow_dispatch:
+  workflow_dispatch: # Allows manual triggering of the workflow
   push:
+    branches:
+      - main # Only triggers on pushes to the main branch
     paths-ignore:
       - "keymap-drawer/**"
 
