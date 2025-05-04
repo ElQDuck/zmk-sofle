@@ -1,22 +1,56 @@
-- [中文](README.md)
-- [English](README_EN.md)
+# Keyboard
 
-# 更新列表
-- 2025/3/30 增加睡眠进入时间1小时  增加防抖时间 优化睡眠后功耗 
+[Sofle Split (Standard version)](https://de.aliexpress.com/item/1005008176724988.html?spm=a2g0o.order_list.order_list_main.16.186b5c5fNgYmZ1&gatewayAdapt=glo2deu)
+
+## Boards
+
+### Right
+- Model: [nice!nano](https://nicekeyboards.com/docs/nice-nano/)
+- Board-ID: nRF52840-nicenano
+- SoftDevice: S140 version 6.1.1
+
+# Sofle Keymap
+
+Use the [keymap-editor](https://nickcoutsos.github.io/keymap-editor/) to change the key map.
+
+ℹ️ Update the image with the [GitHub action](https://github.com/ElQDuck/zmk-sofle/actions/workflows/draw.yml)
+<img src="keymap-drawer/eyelash_sofle.svg" >
+
+# How To Flash Keyboard
+
+1. Build Firmware with [Action: Build ZMK firmware](https://github.com/ElQDuck/zmk-sofle/actions/workflows/build.yml) and download the result files (`firmware.zip`).
+  - The zip folder contains up to 3 files:
+    - zmk-right
+    - zmk-left
+    - zmk-settings-reset (read the [troubleshooting](#troubleshooting) for purpose)
+2. Turn on the keyboard you want to flash and plug it to the PC.
+3. Press 2 times (fast) the reset button (beside the on/off switch) on the keyboard.
+  - A USB drive should appear
+4. Copy `zmk-right` or `zmk-left` into the USB drive.
+  - When the file copy is finished, the Keyboard installs the firmware and restarts automatically.
+
+# Changelog
+
+- 2025/3/30
+  1. Increase sleep entry time by 1 hour.
+  2. Increase stabilization time Optimize power consumption after sleep.
 - 2024/12/21
-  1. 增加zmk-studio支持（只需要刷新左手即可使用）。
+  1. Added support for zmk-studio (just refresh the left hand to use).
 - 2024/10/24
-  1. 修改供电模式，功耗降低。
-  2. 修正RGB供电自动关闭的功能。
+  1. Modified power supply mode to reduce power consumption.
+  2. Fixed the automatic shut-off feature for RGB power supply.
 
-> 如果您的键盘于10月24日之前更新，请更新最新的固件。
-> 
----
-# 联系我
+# Contact
 
-如需3D打印的模型文件或者键盘有任何异常和故障，请联系380465425@qq.com
+For 3D printed model files or any issues and malfunctions with the keyboard, please contact 380465425@qq.com
 
-# Sofle键位图
+# Additional links
+- [EurKEY The European Keyboard Layout](https://eurkey.steffen.bruentjen.eu/start.html)
+- [Keyboard Layout Editor](https://keyboard-layout-editor.com/#/)
+- [How to create a display animation](https://github.com/GPeye/urchin-peripheral-animation)
+  - [Image Collection & Slideshow](https://github.com/GPeye/hammerbeam-slideshow)
+  - [Mario Animation](https://github.com/GPeye/mario-peripheral-animation)
+- [ZMK: List of keycodes](https://zmk.dev/docs/keymaps/list-of-keycodes)
 
-<img src="keymap-drawer/sofle.svg" >
-
+# Troubleshooting
+- [split-keyboard-halves-unable-to-pair](https://zmk.dev/docs/troubleshooting/connection-issues#split-keyboard-halves-unable-to-pair)
