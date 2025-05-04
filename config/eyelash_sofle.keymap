@@ -56,11 +56,11 @@
 
         layer1 {
             bindings = <
-&kp GRAVE        &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &trans
-&trans           &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
-&trans           &kp TILDE        &trans          &trans           &trans           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans           &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12           &trans
-&rgb_ug RGB_TOG  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
+&kp ESC  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &mmv MOVE_UP     &kp F6    &kp F7          &kp F8        &kp F9     &kp F10  &kp F11
+&none    &none   &none   &none   &none   &none     &mmv MOVE_DOWN   &none     &none           &none         &none      &none    &kp F12
+&none    &none   &none   &none   &none   &none     &mmv MOVE_LEFT   &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none    &none
+&none    &none   &none   &none   &none   &none     &mmv MOVE_RIGHT  &none     &none           &none         &none      &none    &none
+&none    &none   &none   &none   &none   &none     &mkp LCLK        &none     &none           &none         &none      &none
             >;
 
             display-name = "layer1";
@@ -69,11 +69,11 @@
 
         cfg {
             bindings = <
-&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &rgb_ug RGB_BRI  &kp F6  &kp F7  &kp F8      &kp F9     &kp F10      &trans
-&trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &rgb_ug RGB_BRD  &trans  &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
-&trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &rgb_ug RGB_EFR  &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
-&trans     &sys_reset    &trans          &bootloader   &trans        &trans          &rgb_ug RGB_EFF  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
-&trans     &trans        &trans          &trans        &trans        &trans          &rgb_ug RGB_TOG  &trans  &trans  &trans      &trans     &trans
+&out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &rgb_ug RGB_BRI  &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &none  &none  &none  &none
+&out OUT_BLE  &bt BT_CLR    &bt BT_CLR_ALL  &none         &none         &none           &rgb_ug RGB_BRD  &none            &none            &none  &none  &none  &none
+&out OUT_USB  &none         &none           &none         &none         &none           &rgb_ug RGB_EFR  &none            &none            &none  &none  &none  &none
+&soft_off     &none         &none           &none         &none         &none           &rgb_ug RGB_EFF  &none            &none            &none  &none  &none  &soft_off
+&none         &none         &none           &none         &sys_reset    &bootloader     &rgb_ug RGB_TOG  &bootloader      &sys_reset       &none  &none  &none
             >;
 
             sensor-bindings = <&scroll_encoder>;
