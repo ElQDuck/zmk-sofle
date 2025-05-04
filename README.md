@@ -14,7 +14,7 @@
 Use the [keymap-editor](https://nickcoutsos.github.io/keymap-editor/) to change the key map.
 
 ℹ️ Update the image with the [GitHub action](https://github.com/ElQDuck/zmk-sofle/actions/workflows/draw.yml)
-<img src="keymap-drawer/sofle.svg" >
+<img src="keymap-drawer/eyelash_sofle.svg" >
 
 # How To Flash Keyboard
 
