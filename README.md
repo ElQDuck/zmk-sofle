@@ -43,3 +43,10 @@ Use the [keymap-editor](https://nickcoutsos.github.io/keymap-editor/) to change 
 # Contact
 
 For 3D printed model files or any issues and malfunctions with the keyboard, please contact 380465425@qq.com
+
+# Additional links
+- [EurKEY The European Keyboard Layout](https://eurkey.steffen.bruentjen.eu/start.html)
+- [Keyboard Layout Editor](https://keyboard-layout-editor.com/#/)
+- [How to create a display animation](https://github.com/GPeye/urchin-peripheral-animation)
+  - [Image Collection & Slideshow](https://github.com/GPeye/hammerbeam-slideshow)
+  - [Mario Animation](https://github.com/GPeye/mario-peripheral-animation)
