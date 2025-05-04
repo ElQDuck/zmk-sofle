@@ -22,7 +22,7 @@ Use the [keymap-editor](https://nickcoutsos.github.io/keymap-editor/) to change 
   - The zip folder contains up to 3 files:
     - zmk-right
     - zmk-left
-    - zmk-left-settings-reset (can be ignored)
+    - zmk-settings-reset (read the [troubleshooting](#troubleshooting) for purpose)
 2. Turn on the keyboard you want to flash and plug it to the PC.
 3. Press 2 times (fast) the reset button (beside the on/off switch) on the keyboard.
   - A USB drive should appear
