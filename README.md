@@ -31,8 +31,6 @@ Use the [keymap-editor](https://nickcoutsos.github.io/keymap-editor/) to change 
 
 # Changelog
 
-- 2025/05/03
-  1. Added [nice_view_custom](https://github.com/GPeye/urchin-peripheral-animation) static image
 - 2025/3/30
   1. Increase sleep entry time by 1 hour.
   2. Increase stabilization time Optimize power consumption after sleep.
