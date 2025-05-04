@@ -10,4 +10,4 @@ include:
     artifact-name: zmk-left
   - board: eyelash_sofle_left
     shield: settings_reset
-    artifact-name: zmk-left-settings-reset
+    artifact-name: zmk-settings-reset

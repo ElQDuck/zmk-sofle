@@ -51,3 +51,6 @@ For 3D printed model files or any issues and malfunctions with the keyboard, ple
   - [Image Collection & Slideshow](https://github.com/GPeye/hammerbeam-slideshow)
   - [Mario Animation](https://github.com/GPeye/mario-peripheral-animation)
 - [ZMK: List of keycodes](https://zmk.dev/docs/keymaps/list-of-keycodes)
+
+# Troubleshooting
+- [split-keyboard-halves-unable-to-pair](https://zmk.dev/docs/troubleshooting/connection-issues#split-keyboard-halves-unable-to-pair)
