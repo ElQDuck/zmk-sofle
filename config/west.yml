@@ -2,6 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: petejohanson
+      url-base: https://github.com/petejohanson
       # Additional modules containing boards/shields/custom code can be listed here as well.
       # See:
       # - https://zmk.dev/docs/features/modules
@@ -11,6 +13,10 @@ manifest:
     - name: dsifry
       url-base: https://github.com/dsifry
   projects:
+    - name: zmk
+      remote: petejohanson
+      revision: core/oled-init-delayed-settings-load-fix
+      import: app/west.yml
     # - name: eyelash_sofle
     #   url: https://github.com/a741725193/zmk-sofle
     #   revision: refactor
