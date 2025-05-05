@@ -8,12 +8,17 @@ manifest:
       # - https://docs.zephyrproject.org/3.5.0/develop/west/manifest.html#projects
     - name: gpeye
       url-base: https://github.com/GPeye
+    - name: dsifry
+      url-base: https://github.com/dsifry
   projects:
-    - name: eyelash_sofle
-      url: https://github.com/a741725193/zmk-sofle
-      revision: refactor
-    - name: mario-peripheral-animation
-      remote: gpeye
+    # - name: eyelash_sofle
+    #   url: https://github.com/a741725193/zmk-sofle
+    #   revision: refactor
+    # - name: mario-peripheral-animation
+    #   remote: gpeye
+    #   revision: main
+    - name: nice-view-mod
+      remote: dsifry
       revision: main
     - name: zmk
       remote: zmkfirmware
