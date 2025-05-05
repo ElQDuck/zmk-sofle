@@ -2,33 +2,19 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: petejohanson
-      url-base: https://github.com/petejohanson
       # Additional modules containing boards/shields/custom code can be listed here as well.
       # See:
       # - https://zmk.dev/docs/features/modules
       # - https://docs.zephyrproject.org/3.5.0/develop/west/manifest.html#projects
-    - name: gpeye
-      url-base: https://github.com/GPeye
     - name: dsifry
       url-base: https://github.com/dsifry
   projects:
     - name: zmk
-      remote: petejohanson
-      revision: core/oled-init-delayed-settings-load-fix
-      import: app/west.yml
-    # - name: eyelash_sofle
-    #   url: https://github.com/a741725193/zmk-sofle
-    #   revision: refactor
-    # - name: mario-peripheral-animation
-    #   remote: gpeye
-    #   revision: main
-    - name: nice-view-mod
-      remote: dsifry
-      revision: main
-    - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    - name: nice-view-mod
+      remote: dsifry
+      revision: main
   self:
     path: config
