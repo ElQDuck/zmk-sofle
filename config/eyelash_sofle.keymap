@@ -4,8 +4,8 @@
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
@@ -70,11 +70,11 @@
 
         cfg {
             bindings = <
-&out OUT_TOG           &bt BT_SEL 0      &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &rgb_ug RGB_BRI  &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &none  &none  &none  &none
-&out OUT_BLE           &bt BT_CLR        &bt BT_CLR_ALL  &none         &none         &none           &rgb_ug RGB_BRD  &none            &none            &none  &none  &none  &none
-&out OUT_USB           &none             &none           &none         &none         &none           &rgb_ug RGB_EFR  &none            &none            &none  &none  &none  &none
-&soft_off              &none             &none           &none         &none         &none           &rgb_ug RGB_EFF  &none            &none            &none  &none  &none  &soft_off
-&kp C_BRIGHTNESS_AUTO  &ext_power EP_ON  &none           &none         &sys_reset    &bootloader     &rgb_ug RGB_TOG  &bootloader      &sys_reset       &none  &none  &none
+&out OUT_TOG           &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &rgb_ug RGB_BRI  &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &none  &none  &none  &none
+&out OUT_BLE           &bt BT_CLR    &bt BT_CLR_ALL  &none         &none         &none           &rgb_ug RGB_BRD  &none            &none            &none  &none  &none  &none
+&out OUT_USB           &none         &none           &none         &none         &none           &rgb_ug RGB_EFR  &none            &none            &none  &none  &none  &none
+&soft_off              &none         &none           &none         &none         &none           &rgb_ug RGB_EFF  &none            &none            &none  &none  &none  &soft_off
+&kp C_BRIGHTNESS_AUTO  &bl BL_ON     &none           &none         &sys_reset    &bootloader     &rgb_ug RGB_TOG  &bootloader      &sys_reset       &none  &none  &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
