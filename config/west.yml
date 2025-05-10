@@ -6,15 +6,16 @@ manifest:
       # See:
       # - https://zmk.dev/docs/features/modules
       # - https://docs.zephyrproject.org/3.5.0/develop/west/manifest.html#projects
-    - name: dsifry
-      url-base: https://github.com/dsifry
+    - name: ElQDuck
+      url-base: https://github.com/ElQDuck
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    # Bongocat (from https://github.com/dsifry) and my house coat of arms
     - name: nice-view-mod
-      remote: dsifry
-      revision: main
+      remote: ElQDuck
+      revision: house-coat-of-arms
   self:
     path: config
