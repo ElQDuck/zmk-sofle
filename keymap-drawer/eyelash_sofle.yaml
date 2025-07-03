@@ -27,7 +27,7 @@ layers:
   - O
   - P
   - {t: \, s: '|'}
-  - $$mdi:apple-keyboard-caps$$
+  - $$mdi:apple-keyboard-shift$$
   - A
   - S
   - D
@@ -40,7 +40,7 @@ layers:
   - L
   - {t: ;, s: ':'}
   - {t: '''', s: '"'}
-  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-control$$
   - Z
   - X
   - C
@@ -54,7 +54,7 @@ layers:
   - {t: /, s: '?'}
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:volume-off$$
-  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - layer1
@@ -92,7 +92,7 @@ layers:
   - END
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F12
-  - '~'
+  - $$mdi:apple-keyboard-shift$$
   - ^
   - '&'
   - '*'
@@ -105,8 +105,8 @@ layers:
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - PRINTSCREEN
-  - <
-  - '>'
+  - $$mdi:apple-keyboard-control$$
+  - '~'
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
   - '{'
@@ -119,8 +119,8 @@ layers:
   - {t: '=', s: +}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-option$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:minus-circle-outline$$', type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
