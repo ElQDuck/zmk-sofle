@@ -40,6 +40,15 @@ Use the [keymap-editor](https://nickcoutsos.github.io/keymap-editor/) to change 
   1. Modified power supply mode to reduce power consumption.
   2. Fixed the automatic shut-off feature for RGB power supply.
 
+# TODO: migrate to Zephyr 4.x / LVGL 9
+
+`config/west.yml` pins ZMK to the `v0.3` release branch (Zephyr 3.5, LVGL 8). It used to track `main`, which since [`c06fa48c`](https://github.com/zmkfirmware/zmk/commit/c06fa48c) (2025-12-10, "feat!: Move to zephyr v4.1") is Zephyr 4.x. Two things in this repo break against that, so moving back to `main` is a project, not a version bump:
+
+- **Board layout.** `boards/arm/eyelash_sofle/` is Hardware Model v1 (`Kconfig.board`, `board.cmake`, `eyelash_sofle.yaml`). Zephyr 4.x only supports HWMv2, so the board needs porting to `board.yml` + `Kconfig.eyelash_sofle`, or converting into a shield on `nice_nano_v2` the way [upstream did](https://github.com/a741725193/zmk-sofle/commit/4848e21).
+- **Display widgets.** The `nice_view_custom` widgets in [ElQDuck/nice-view-mod](https://github.com/ElQDuck/nice-view-mod) are written against the LVGL 8 canvas API. LVGL 9 removes it: `lv_canvas_draw_rect` / `lv_canvas_draw_text` become `lv_layer_t` plus `lv_draw_*`, and `LV_IMG_CF_TRUE_COLOR` becomes `LV_COLOR_FORMAT_*`.
+
+Upstream `a741725193/zmk-sofle@main` is not a shortcut here: since the dyastudio restructure its shield overlays `#include <behaviors/battery_history_request.dtsi>` and `<input/processors/runtime-input-processor.dtsi>`, which only exist in [cormoran](https://github.com/cormoran)'s ZMK fork and modules. Adopting it means giving up stock `zmkfirmware/zmk`.
+
 # Contact
 
 For 3D printed model files or any issues and malfunctions with the keyboard, please contact 380465425@qq.com
