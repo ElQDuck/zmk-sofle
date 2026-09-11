@@ -49,6 +49,43 @@ Use the [keymap-editor](https://nickcoutsos.github.io/keymap-editor/) to change 
 
 Upstream `a741725193/zmk-sofle@main` is not a shortcut here: since the dyastudio restructure its shield overlays `#include <behaviors/battery_history_request.dtsi>` and `<input/processors/runtime-input-processor.dtsi>`, which only exist in [cormoran](https://github.com/cormoran)'s ZMK fork and modules. Adopting it means giving up stock `zmkfirmware/zmk`.
 
+# Building Locally
+
+The GitHub action is still the normal way to build, but `scripts/build-local.sh` builds the same firmware on your machine in Docker, with no toolchain to install. Turnaround is about a minute instead of a CI round trip, and it is the only practical way to iterate on display or driver debugging.
+
+Requires Docker, and your user in the `docker` group. The first run downloads roughly 1.5GB of Zephyr and its modules into `~/.cache/zmk-west` (override with `ZMK_WEST_WORKSPACE`); later runs reuse it.
+
+```sh
+# the two real firmwares
+SNIPPET=studio-rpc-usb-uart scripts/build-local.sh left eyelash_sofle_left \
+    -DSHIELD=nice_view_custom -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
+scripts/build-local.sh right eyelash_sofle_right -DSHIELD=nice_view_custom
+```
+
+The `.uf2` lands in `~/.cache/zmk-west/build/<name>/zephyr/zmk.uf2`. Flash it the usual way — double-tap reset, then **copy it with `cp` from a terminal**. GUI file managers report a spurious "error getting information for file" because the bootloader reboots and unmounts the drive the instant the write finishes; the flash actually succeeded.
+
+The build image is pinned to `zmkfirmware/zmk-build-arm:3.5-branch`, matching the Zephyr 3.5 that ZMK `v0.3` uses. Do not use `:stable` — it tracks ZMK `main` and is Zephyr 4.x, which cannot build this board (see the migration TODO above).
+
+## Debugging with a USB console
+
+The left half can log over USB CDC ACM. Note that `zmk-usb-logging` and `studio-rpc-usb-uart` both claim that console, so a logging build has no ZMK Studio.
+
+```sh
+SNIPPET=zmk-usb-logging scripts/build-local.sh debug eyelash_sofle_left \
+    -DSHIELD=nice_view_custom \
+    -DCONFIG_LV_USE_LOG=y -DCONFIG_LV_LOG_LEVEL_WARN=y -DCONFIG_LV_LOG_PRINTF=y \
+    -DCONFIG_DISPLAY_LOG_LEVEL_DBG=y
+```
+
+Read it with `stty -F /dev/ttyACM1 raw -echo 115200 && cat /dev/ttyACM1`. Two `ttyACM` devices appear; the console is normally the second. Resetting the board re-enumerates USB and kills an open `cat`, so to capture boot messages, loop:
+
+```sh
+while true; do
+    [ -c /dev/ttyACM1 ] && { stty -F /dev/ttyACM1 raw -echo 115200; cat /dev/ttyACM1; }
+    sleep 0.05
+done | tee boot.log
+```
+
 # Contact
 
 For 3D printed model files or any issues and malfunctions with the keyboard, please contact 380465425@qq.com
