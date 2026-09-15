@@ -11,11 +11,18 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      # Pinned to the v0.3 release branch (Zephyr 3.5, LVGL 8).
+      # `main` is Zephyr 4.x now: it drops the Hardware Model v1 board layout this
+      # repo uses under boards/arm/, and LVGL 9 removes the canvas API the
+      # nice-view-mod widgets are written against. See the README TODO.
+      revision: v0.3
       import: app/west.yml
     # Bongocat (from https://github.com/dsifry) and my house coat of arms
     - name: nice-view-mod
       remote: ElQDuck
-      revision: house-coat-of-arms
+      # Temporary: carries the LVGL work-queue fix. Once
+      # ElQDuck/nice-view-mod#fix/lvgl-workqueue-race is merged into
+      # house-coat-of-arms, point this back at house-coat-of-arms.
+      revision: fix/lvgl-workqueue-race
   self:
     path: config
