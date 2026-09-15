@@ -20,9 +20,6 @@ manifest:
     # Bongocat (from https://github.com/dsifry) and my house coat of arms
     - name: nice-view-mod
       remote: ElQDuck
-      # Temporary: carries the LVGL work-queue fix. Once
-      # ElQDuck/nice-view-mod#fix/lvgl-workqueue-race is merged into
-      # house-coat-of-arms, point this back at house-coat-of-arms.
-      revision: fix/lvgl-workqueue-race
+      revision: main
   self:
     path: config
