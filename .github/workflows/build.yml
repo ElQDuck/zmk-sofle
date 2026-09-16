@@ -9,5 +9,7 @@ on:
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    # Must match the ZMK revision in config/west.yml. The @main workflow targets
+    # Zephyr 4.x and fails this Hardware Model v1 board in its ZMK-compat check.
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
 
